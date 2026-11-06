@@ -1,4 +1,4 @@
-package com.chiranthan.bloggingApiEntity;
+package com.chiranthan.bloggingApi;
 
 import java.util.List;
 
