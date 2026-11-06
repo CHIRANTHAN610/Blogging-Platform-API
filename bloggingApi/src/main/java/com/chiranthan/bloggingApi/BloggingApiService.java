@@ -15,4 +15,11 @@ public class BloggingApiService {
    public BloggingStructure createBlog(BloggingStructure blog) {
 	 return bloggingApiRepository.save(blog);
    }
+
+   public String deleteBlog(Integer id) {
+	BloggingStructure blog = bloggingApiRepository.findById(id).orElse(null);
+	bloggingApiRepository.delete(blog);
+	return "Blog deleted successfully";
+	
+   }
 }

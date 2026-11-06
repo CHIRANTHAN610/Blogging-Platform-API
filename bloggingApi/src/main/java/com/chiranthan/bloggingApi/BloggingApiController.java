@@ -19,4 +19,8 @@ public class BloggingApiController {
     public BloggingStructure createBlog(@RequestBody BloggingStructure blog) {
         return bloggingApiService.createBlog(blog);
     }
+    @DeleteMapping("/deleteBlog/{id}")
+    public void deleteBlog(@PathVariable Integer id) {
+		bloggingApiService.deleteBlog(id);
+	}
 }
